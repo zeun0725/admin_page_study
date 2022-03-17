@@ -17,7 +17,6 @@ public class OrderDetailRepositoryTest extends AdminPageStudyApplicationTests {
     public void create() {
         OrderDetail orderDetail = new OrderDetail();
 
-        orderDetail.setOrderAt(LocalDateTime.now());
 
         // 어떤 사람?
 //        orderDetail.setUser(4L);
