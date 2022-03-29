@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(exclude = {"orderGroup"})
+@ToString(exclude = {"orderGroup", "item"})
 public class OrderDetail {
 
     @Id
@@ -36,7 +36,8 @@ public class OrderDetail {
 
     private String updatedBy;
 
-    private Long itemId;
+    @ManyToOne
+    private Item item;
 
     // OrderDetail N : 1 OrderGroup
     @ManyToOne
