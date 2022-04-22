@@ -120,6 +120,7 @@ public class UserApiLogicService extends BaseService<UserApiRequest, UserApiResp
         return userApiResponse;
     }
 
+    @Override
     public Header<List<UserApiResponse>> search(Pageable pageable) {
         Page<User> users = baseRepository.findAll(pageable);
 
